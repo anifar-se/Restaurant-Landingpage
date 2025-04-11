@@ -1,4 +1,4 @@
-/* General Reset */
+/* General  */
 body, h1, h2, p, ul, li, a {
   margin: 0;
   padding: 0;
@@ -10,16 +10,18 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: #f9f9f9;
 }
 
 /* Header Styling */
 header {
-  background-color: #333;
+  background-color: orangered;
   color: white;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo-container {
@@ -33,26 +35,40 @@ header {
   height: auto;
 }
 
+.restaurant-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+  line-height: 1.2;
+}
+
 /* Navigation Styling */
+nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
 nav ul {
   list-style: none;
   display: flex;
   gap: 15px;
   padding: 0;
   margin: 0;
-  justify-content: center;
-  background-color: grey;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
-  transition: color 0.3s ease;
+  padding: 5px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #f4a261;
+  background-color: #f4a261;
+  color: black;
 }
 
 /* Hero Section Styling */
@@ -66,7 +82,7 @@ nav ul li a:hover {
   color: white;
   background-size: cover;
   background-position: center;
-  animation: changeBackground 12s infinite;
+  animation: changeBackground 14s infinite;
 }
 
 #hero .hero-content {
@@ -75,7 +91,22 @@ nav ul li a:hover {
   padding: 20px;
 }
 
-#hero .hero-content h2,
+#hero .hero-content h2 {
+  font-size: 3.5rem; /* Large font size */
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  margin: 0 auto;
+  max-width: 80%;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #4caf50, #8bc34a); /* Accessible green gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #hero .hero-content p {
   margin-bottom: 20px;
 }
@@ -112,20 +143,32 @@ nav ul li a:hover {
   0% {
     background-image: url('b1.jpg');
   }
-  33% {
+  14% {
     background-image: url('b2.jpg');
   }
-  66% {
+  28% {
     background-image: url('b3.jpg');
   }
-  100% {
+  42% {
     background-image: url('b4.jpg');
+  }
+  57% {
+    background-image: url('b5.jpg');
+  }
+  71% {
+    background-image: url('b6.jpg');
+  }
+  85% {
+    background-image: url('b7.jpg');
+  }
+  100% {
+    background-image: url('b1.jpg');
   }
 }
 
 /* Footer Styling */
 footer {
-  background-color: #333;
+  background-color: orangered;
   color: white;
   text-align: center;
   padding: 20px;
@@ -150,8 +193,6 @@ footer ul li a:hover {
 }
 
 /* Media Queries for Responsive Design */
-
-/* For tablets (widths between 768px and 1024px) */
 @media (max-width: 1024px) and (min-width: 768px) {
   header {
     flex-direction: column;
@@ -176,7 +217,6 @@ footer ul li a:hover {
   }
 }
 
-/* For mobile devices (widths below 768px) */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -220,3 +260,37 @@ footer ul li a:hover {
     gap: 10px;
   }
 }
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4), 0 0 10px #ff7e5f, 0 0 20px #feb47b;
+  }
+  100% {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4), 0 0 15px #ff7e5f, 0 0 30px #feb47b;
+  }
+}
+ 
+
+
+
+
+
+ 
+ 
+
+
+ 
+  
+  
